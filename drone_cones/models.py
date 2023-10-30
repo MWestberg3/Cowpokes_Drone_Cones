@@ -8,11 +8,11 @@ class Account(models.Model):
     firstName = models.CharField(max_length=100)
     email = models.EmailField()
     address = models.CharField(max_length=100)
-    address2 = models.CharField(max_length=100)
+    address2 = models.CharField(max_length=100, null=True)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
     zip = models.CharField(max_length=100)
-    cart = models.JSONField()
+    cart = models.JSONField(null=True)
 
 class Drone(models.Model):
     id = models.AutoField(primary_key=True)
